@@ -33,7 +33,6 @@ const search = ref('')
 
 const searchFilter = computed((): ITask[] => {
     if (search.value) {
-        //console.log('check2a')
         return orderedTasks.value.filter((item: ITask) => {
             return search.value
                 .toLowerCase()
@@ -41,7 +40,6 @@ const searchFilter = computed((): ITask[] => {
                 .every((v) => item.title.toLowerCase().includes(v))
         })
     } else {
-        console.log('check2b')
         return orderedTasks.value
     }
 })
