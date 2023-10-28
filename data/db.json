@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "thing1",
+      "isFav": true
+    },
+    {
+      "id": 3,
+      "title": "thing3",
+      "isFav": false
+    },
+    {
+      "id": 4,
+      "title": "thing4",
+      "isFav": false
+    },
+    {
+      "title": "safdsa",
+      "isFav": false,
+      "id": 7045
+    }
+  ]
+}
