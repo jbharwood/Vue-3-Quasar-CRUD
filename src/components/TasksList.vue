@@ -10,10 +10,17 @@
     <button @click="store.$reset">reset</button>
     <button @click="sortMethod = 'id'">order by id</button>
     <button @click="sortMethod = 'title'">order by title</button>
-    <div v-if="orderedTasks.length">
-        <div v-for="task in searchFilter" :key="task.id">
+    <div class="q-pa-md bg-grey-10 text-white" v-if="orderedTasks.length">
+        <q-list
+            dark
+            bordered
+            separator
+            style="max-width: 318px"
+            v-for="task in searchFilter"
+            :key="task.id"
+        >
             <TaskDetails :task="task" />
-        </div>
+        </q-list>
     </div>
 </template>
 

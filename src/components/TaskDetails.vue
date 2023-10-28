@@ -1,12 +1,30 @@
 <template>
-    <div v-if="task">
-        <router-link :to="{ name: 'TaskDetails', params: { id: task.id } }">
-            <p>{{ task.title }}</p>
-        </router-link>
-        <p>{{ task.isFav }}</p>
-        <button @click="store.deleteTasks(task.id)">delete</button>
-        <button @click="store.toggleFav(task.id)">toggle fav</button>
-    </div>
+    <q-item v-ripple v-if="task">
+        <q-item-section>
+            <router-link
+                :to="{ name: 'TaskDetails', params: { id: task.id } }"
+                style="text-decoration: none; color: inherit"
+            >
+                <q-item-label>
+                    {{ task.title }}
+                </q-item-label>
+                <q-item-label caption>
+                    {{ task.id }}
+                </q-item-label>
+                <q-item-label caption>
+                    {{ task.isFav }}
+                </q-item-label>
+            </router-link>
+        </q-item-section>
+        <q-item-section side top>
+            <q-item-label caption>
+                <button @click="store.deleteTasks(task.id)">delete</button>
+            </q-item-label>
+            <q-item-label caption>
+                <button @click="store.toggleFav(task.id)">toggle fav</button>
+            </q-item-label>
+        </q-item-section>
+    </q-item>
 </template>
 
 <script setup lang="ts">
