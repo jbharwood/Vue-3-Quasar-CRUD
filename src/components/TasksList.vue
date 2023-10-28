@@ -2,8 +2,15 @@
     <div id="table-cms" class="table-cms">
         <q-input outlined v-model="search" label="Search..." />
     </div>
-    <q-btn @click="sortMethod = 'id'" color="dark" label="order by id" />
-    <q-btn @click="sortMethod = 'title'" color="dark" label="order by title" />
+    <br />
+    <div>
+        <q-btn @click="sortMethod = 'id'" color="dark" label="order by id" />
+        <q-btn
+            @click="sortMethod = 'title'"
+            color="dark"
+            label="order by title"
+        />
+    </div>
     <div class="q-pa-md text-white" v-if="orderedTasks.length">
         <q-list
             dark

@@ -1,5 +1,5 @@
 <template>
-    <q-page class="">
+    <q-page class="center">
         <TaskForm />
         <TasksList />
     </q-page>
