@@ -1,1 +1,4 @@
 /* app global css */
+button {
+    cursor: pointer;
+}
