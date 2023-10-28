@@ -13,15 +13,23 @@
         </q-item-section>
         <q-item-section side top>
             <q-item-label caption>
-                <button @click="store.deleteTasks(task.id)">delete</button>
+                <q-btn
+                    @click="store.deleteTasks(task.id)"
+                    color="dark"
+                    label="delete"
+                />
             </q-item-label>
             <q-item-label caption>
-                <button @click="store.toggleFav(task.id)">toggle fav</button>
+                <q-btn
+                    @click="store.toggleFav(task.id)"
+                    color="dark"
+                    label="toggle fav"
+                />
             </q-item-label>
         </q-item-section>
     </q-item>
     <q-item-label caption>
-        <button @click="$router.go(-1)">back</button>
+        <q-btn @click="$router.go(-1)" color="dark" label="back" />
     </q-item-label>
 </template>
 
