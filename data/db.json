@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "thing1",
-      "isFav": true
+      "isFav": false
     },
     {
       "id": 3,
@@ -19,6 +19,11 @@
       "title": "safdsa",
       "isFav": true,
       "id": 7045
+    },
+    {
+      "title": "new",
+      "isFav": false,
+      "id": 9751
     }
   ]
 }

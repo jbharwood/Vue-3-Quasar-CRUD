@@ -6,13 +6,19 @@ const routes: RouteRecordRaw[] = [
         component: () => import('layouts/MainLayout.vue'),
         children: [
             { path: '', component: () => import('pages/IndexPage.vue') },
+            {
+                path: '/tasks/:id',
+                name: 'TaskDetails',
+                component: () => import('pages/TaskDetailsPage.vue'),
+                props: true,
+            },
+            {
+                path: '/settings',
+                name: 'Settings',
+                component: () => import('pages/SettingsPage.vue'),
+                props: true,
+            },
         ],
-    },
-    {
-        path: '/tasks/:id',
-        name: 'TaskDetails',
-        component: () => import('pages/TaskDetailsPage.vue'),
-        props: true,
     },
 
     // Always leave this as last one,
