@@ -15,7 +15,7 @@ import { ref } from "vue"
             />
 
             <div>
-                <q-btn label="Submit" type="submit" color="primary" />
+                <q-btn label="Submit" type="submit" color="dark" />
                 <q-btn
                     label="Reset"
                     type="reset"

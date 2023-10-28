@@ -1,15 +1,10 @@
 <template>
     <div id="table-cms" class="table-cms">
-        <input
-            class="search-field textfield-closed"
-            type="search"
-            placeholder="Search"
-            v-model="search"
-        />
+        <q-input outlined v-model="search" label="Search..." />
     </div>
     <button @click="store.$reset">reset</button>
-    <button @click="sortMethod = 'id'">order by id</button>
-    <button @click="sortMethod = 'title'">order by title</button>
+    <q-btn @click="sortMethod = 'id'" color="dark" label="order by id" />
+    <q-btn @click="sortMethod = 'title'" color="dark" label="order by title" />
     <div class="q-pa-md bg-grey-10 text-white" v-if="orderedTasks.length">
         <q-list
             dark
