@@ -23,13 +23,11 @@ import { useCounterStore } from 'stores/example-store'
 import { computed, ref } from 'vue'
 import { ITask } from './models'
 
-const store = useCounterStore()
-
 const sortMethod = ref('id')
-
-store.getTasks()
-
 const search = ref('')
+
+const store = useCounterStore()
+store.getTasks()
 
 const searchFilter = computed((): ITask[] => {
     if (search.value) {
