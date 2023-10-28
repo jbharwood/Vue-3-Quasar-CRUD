@@ -7,6 +7,7 @@
             <button @click="store.deleteTasks(task.id)">delete</button>
         </router-link>
         <button @click="store.toggleFav(task.id)">toggle fav</button>
+        <button @click="$router.go(-1)">back</button>
     </div>
 </template>
 
