@@ -14,13 +14,16 @@
             </q-item-section>
             <q-item-section side top>
                 <q-item-label caption>
-                    <router-link to="/">
-                        <q-btn
-                            @click="store.deleteTasks(task.id)"
-                            color="dark"
-                            label="delete"
-                        />
-                    </router-link>
+                    <q-btn
+                        @click="
+                            () => {
+                                store.deleteTasks(task?.id)
+                                $router.push('/')
+                            }
+                        "
+                        color="dark"
+                        label="delete"
+                    />
                 </q-item-label>
                 <q-item-label caption>
                     <q-btn
